@@ -22,7 +22,7 @@ require 'yaml'
 
 class SmsNotifier < ActionMailer::Base
   @config = YAML::load(File.open("#{RAILS_ROOT}/config/sms_fu.yml"))
-  @@from_address = @config['from_address']
+  @@from_address = @config['config']['from_address']
   cattr_accessor :from_address
 
   def sms_message(recipient, message)

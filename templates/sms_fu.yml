@@ -1,5 +1,6 @@
-from_address: noreply@domain.com
-
+config:
+  from_address: noreply@domain.com
+  
 carriers:
   # US Carriers
   alltell: @message.alltell.com
@@ -10,6 +11,7 @@ carriers:
   boost: @myboostmobile.com
   cellularsouth: @csouth1.com
   metropcs: @mymetropcs.com
+  powertel: @ptel.net
   pscwireless: @sms.pscel.com
   qwest: @qwestmp.com
   southernlink: @page.southernlinc.com
@@ -38,5 +40,3 @@ carriers:
   vodafone-jp-touhoku: @h.vodafone.ne.jp
   vodafone-jp-niigata: @h.vodafone.ne.jp
   vodafone-jp-toukai: @h.vodafone.ne.jp
-
-  
