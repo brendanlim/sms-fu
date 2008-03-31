@@ -52,11 +52,11 @@ Example Usage
 		
     deliver_sms("5558675309","at&t","your message here", :limit => 128)
 
-	* You can retrieve just the formatted address to use in your own mailer.
+  * You can retrieve just the formatted address to use in your own mailer.
 
-  	get_sms_address("5558675309","at&t")
+    get_sms_address("5558675309","at&t")
 
-		This returns "5558675309@txt.att.net"
+    This returns "5558675309@txt.att.net"
 
 		
 Copyright (c) 2008 Brendan G. Lim, released under the MIT license

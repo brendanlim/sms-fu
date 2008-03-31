@@ -21,7 +21,6 @@ require 'yaml'
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 module SMSFu
-
   RAILS_CONFIG_ROOT = defined?(RAILS_ROOT) ? "#{RAILS_ROOT}/config" : "#{File.dirname(__FILE__)}/../templates"
   @config = YAML::load(File.open("#{RAILS_CONFIG_ROOT}/sms_fu.yml"))
   @@carriers = @config['carriers']
@@ -33,6 +32,7 @@ module SMSFu
     options[:limit] ||= message.length
     message = message[0..options[:limit]-1]
     sms_email = determine_sms_email(format_number(number),carrier)
+    
     SmsNotifier.deliver_sms_message(sms_email,message)
   rescue SMSFuException => exception
     raise exception
