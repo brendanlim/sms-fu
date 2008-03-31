@@ -1,1 +1,43 @@
 from_address: noreply@domain.com
+
+carriers:
+  # US Carriers
+  alltell: @message.alltell.com
+  ameritech: @paging.acswireless.com  
+  at&t: @txt.att.net
+  bellsouthmobility: @blsdcs.net
+  blueskyfrog: @blueskyfrog.com
+  boost: @myboostmobile.com
+  cellularsouth: @csouth1.com
+  metropcs: @mymetropcs.com
+  powertel: @ptel.net
+  pscwireless: @sms.pscel.com
+  qwest: @qwestmp.com
+  southernlink: @page.southernlinc.com
+  sprint: @messaging.sprintpcs.com
+  suncom: @tms.suncom.com
+  t-mobile: @tmomail.net
+  virgin: @vmobl.net
+  verizon: @vtext.com
+  # International Carriers
+  fido-canada: @fido.ca
+  t-mobile-germany: @t-d1-sms.de
+  t-mobile-uk: @t-mobile.uk.net
+  vodafone-uk: @sms.vodafone.net
+  vodafone-italy: @sms.vodafone.it
+  vodafone-jp-chuugoku: @n.vodafone.ne.jp
+  vodafone-jp-hokkaido: @d.vodafone.ne.jp
+  vodafone-jp-hokuriko: @r.vodafone.ne.jp
+  vodafone-jp-kansai: @k.vodafone.ne.jp
+  vodafone-jp-osaka: @k.vodafone.ne.jp
+  vodafone-jp-kanto: @k.vodafone.ne.jp
+  vodafone-jp-koushin: @k.vodafone.ne.jp
+  vodafone-jp-tokyo: @k.vodafone.ne.jp
+  vodafone-jp-kyuushu: @q.vodafone.ne.jp
+  vodafone-jp-okinawa: @q.vodafone.ne.jp
+  vodafone-jp-shikoku: @s.vodafone.ne.jp
+  vodafone-jp-touhoku: @h.vodafone.ne.jp
+  vodafone-jp-niigata: @h.vodafone.ne.jp
+  vodafone-jp-toukai: @h.vodafone.ne.jp
+
+  

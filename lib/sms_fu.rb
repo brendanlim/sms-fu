@@ -1,3 +1,4 @@
+require 'yaml'
 # Copyright (c) 2008 Brendan G. Lim (brendangl@gmail.com)
 # 
 # Permission is hereby granted, free of charge, to any person obtaining
@@ -20,7 +21,7 @@
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 module SMSFu
-  class SMSFuException < StandardError; end
+  @@config = YAML::load(File.open("#{RAILS_ROOT}/config/sms_fu.yml"))
 
   def deliver_sms(number,carrier,message,options={})
     number = format_number(number)
@@ -30,7 +31,6 @@ module SMSFu
     message = message[0..options[:limit]-1]
     sms_email = determine_sms_email(format_number(number),carrier)
     SmsNotifier.deliver_sms_message(sms_email,message)
-
   rescue SMSFuException => exception
     raise exception
   end
@@ -53,16 +53,13 @@ module SMSFu
     return (number.length == 10 && number[/^\d+$/]) ? true : false
   end  
   
-  def determine_sms_email(phone_number, phone_carrier)
-    case phone_carrier.downcase
-    when "alltel":    "#{phone_number}@message.alltell.com"
-    when "at&t":      "#{phone_number}@txt.att.net"
-    when "boost":     "#{phone_number}@myboostmobile.com"
-    when "sprint":    "#{phone_number}@messaging.sprintpcs.com"
-    when "t-mobile":  "#{phone_number}@tmomail.net"
-    when "virgin":    "#{phone_number}@vmobl.net"
-    when "verizon":   "#{phone_number}@vtext.com"
-    else raise SMSFuException.new("Specified carrier, #{phone_carrier} is not supported.")
+  def determine_sms_email(phone_number, carrier)
+    if @@config[:carriers].has_key?(carrier.downcase)
+      "#{phone_number}#{@@config[:carriers][carrier.downcase]}"
+    else 
+      raise SMSFuException.new("Specified carrier, #{carrier} is not supported.")
     end
-  end      
+  end 
+       
+  class SMSFuException < StandardError; end
 end
