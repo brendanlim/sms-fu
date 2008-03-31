@@ -1,11 +1,12 @@
 SMS Fu
--------------
+------------------
 
-  Allows you to send an SMS in the form of an e-mail to a cell phone.  Only
-  numbers in the United States are supported.  
+  Allows you to send an SMS in the form of an e-mail to a cell phone.
 
-  Supported Carriers: 
-  Alltel, AT&T, Boost Mobile, Sprint, T-Mobile, Virgin Mobile, Verizon Wireless
+  Supported Carriers (US & International): 
+  Alltel, Ameritech, AT&T, BellSouth Mobility, BlueSkyFrog, Boost Mobile, Cellular South,
+  Fido, Metro PCS, PSC Wireless, Qwest, Southern Link, Sprint, Suncom, T-Mobile (US/UK/Germany), 
+  Virgin Mobile, Verizon Wireless, Vodafone (UK,Italy,Japan)
 
 Setup Instructions
 ------------------
@@ -28,27 +29,32 @@ Example Usage
   * You have to send in the phone number, without any non-numeric characters.  The
     phone numbers must be 10 digits in length.  
   * The two required parameters are the phone number and the phone carrier.
-  * Here are the carrier values:
+  * Here are some of the default carrier values:
 		
-    Alltel Wireless   =>  "Alltel"
-    AT&T/Cingular     =>  "AT&T"
-    Boost Mobile      =>  "Boost"
-    Sprint Wireless   =>  "Sprint"
-    T-Mobile          =>  "T-Mobile"
-    Virgin Mobile     =>  "Virgin"
-    Verizon Wireless  =>  "Verizon"
+    Alltel Wireless   =>  "alltel"
+    AT&T/Cingular     =>  "at&t"
+    Boost Mobile      =>  "boost"
+    Sprint Wireless   =>  "sprint"
+    T-Mobile US       =>  "t-mobile"
+    T-Mobile UK       =>  "t-mobile-uk"
+    Virgin Mobile     =>  "virgin"
+    Verizon Wireless  =>  "verizon"
+    Vodafone Tokyo		=> 	"vodafone-jp-tokyo"
+
+	* Check sms_fu.yml for a complete list of supported carriers, including international
+    carriers as well.  Feel free to add your own carriers as well.
 		
-    deliver_sms("5558675309","AT&T","your message here")
+    deliver_sms("5558675309","at&t","your message here")
 		
 	* You can set the maximum length of the SMS message, which is not set by
     default.  Most phones can only accept 128 characters.  To do this just 
     specify the limit option.
 		
-    deliver_sms("5558675309","AT&T","your message here", :limit => 128)
+    deliver_sms("5558675309","at&t","your message here", :limit => 128)
 
 	* You can retrieve just the formatted address to use in your own mailer.
 
-  	get_sms_address("5558675309","AT&T")
+  	get_sms_address("5558675309","at&t")
 
 		This returns "5558675309@txt.att.net"
 
