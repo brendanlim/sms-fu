@@ -50,12 +50,12 @@ module SMSFu
   end
   
   def is_valid?(number)
-    return (number.length == 10 && number[/^\d+$/]) ? true : false
+    return (number.length >= 10 && number[/^.\d+$/]) ? true : false
   end  
   
   def determine_sms_email(phone_number, carrier)
-    if @@config[:carriers].has_key?(carrier.downcase)
-      "#{phone_number}#{@@config[:carriers][carrier.downcase]}"
+    if @@config['carriers'].has_key?(carrier.downcase)
+      "#{phone_number}#{@@config['carriers'][carrier.downcase]}"
     else 
       raise SMSFuException.new("Specified carrier, #{carrier} is not supported.")
     end

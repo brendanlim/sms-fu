@@ -39,7 +39,7 @@ Example Usage
     T-Mobile UK       =>  "t-mobile-uk"
     Virgin Mobile     =>  "virgin"
     Verizon Wireless  =>  "verizon"
-    Vodafone Tokyo		=> 	"vodafone-jp-tokyo"
+    Vodafone Tokyo		=>  "vodafone-jp-tokyo"
 
 	* Check sms_fu.yml for a complete list of supported carriers, including international
     carriers as well.  Feel free to add your own carriers as well.
