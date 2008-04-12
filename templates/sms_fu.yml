@@ -21,9 +21,17 @@ carriers:
   virgin: @vmobl.net
   verizon: @vtext.com
   # International Carriers
+  e-plus-germany: @smsmail.eplus.de
   fido-canada: @fido.ca
+  o2-germany: @o2online.de
+  o2-uk: @mmail.co.uk
+  orange-netherlands: @sms.orange.nl
+  orange-uk: @orange.net
+  t-mobile-austria: @sms.t-mobile.at
   t-mobile-germany: @t-d1-sms.de
   t-mobile-uk: @t-mobile.uk.net
+  telefonica-spain: @movistar.net
+  vodafone-germany: @vodafone-sms.de
   vodafone-uk: @sms.vodafone.net
   vodafone-italy: @sms.vodafone.it
   vodafone-jp-chuugoku: @n.vodafone.ne.jp
@@ -40,3 +48,4 @@ carriers:
   vodafone-jp-touhoku: @h.vodafone.ne.jp
   vodafone-jp-niigata: @h.vodafone.ne.jp
   vodafone-jp-toukai: @h.vodafone.ne.jp
+  vodafone-spain: @vodafone.es
