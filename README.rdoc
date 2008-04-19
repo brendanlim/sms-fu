@@ -30,15 +30,15 @@ That's it!  Now you're good to go.
 * The two required parameters are the phone number and the phone carrier.
 * Here are some of the default carrier values:
 		
-  Alltel Wireless   =>  "alltel"
-  AT&T/Cingular     =>  "at&t"
-  Boost Mobile      =>  "boost"
-  Sprint Wireless   =>  "sprint"
-  T-Mobile US       =>  "t-mobile"
-  T-Mobile UK       =>  "t-mobile-uk"
-  Virgin Mobile     =>  "virgin"
-  Verizon Wireless  =>  "verizon"
-  Vodafone Tokyo		=>  "vodafone-jp-tokyo"
+    Alltel Wireless   =>  "alltel"
+    AT&T/Cingular     =>  "at&t"
+    Boost Mobile      =>  "boost"
+    Sprint Wireless   =>  "sprint"
+    T-Mobile US       =>  "t-mobile"
+    T-Mobile UK       =>  "t-mobile-uk"
+    Virgin Mobile     =>  "virgin"
+    Verizon Wireless  =>  "verizon"
+    Vodafone Tokyo		=>  "vodafone-jp-tokyo"
 
 * <b>Check sms_fu.yml for a complete list of supported carriers, including international
   carriers as well.</b>
