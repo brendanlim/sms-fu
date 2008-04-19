@@ -38,7 +38,7 @@ That's it!  Now you're good to go.
     T-Mobile UK       =>  "t-mobile-uk"
     Virgin Mobile     =>  "virgin"
     Verizon Wireless  =>  "verizon"
-    Vodafone Tokyo		=>  "vodafone-jp-tokyo"
+    Vodafone Tokyo    =>  "vodafone-jp-tokyo"
 
 * <b>Check sms_fu.yml for a complete list of supported carriers, including international
   carriers as well.</b>
