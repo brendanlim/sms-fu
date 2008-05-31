@@ -21,10 +21,14 @@ require 'yaml'
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 module SMSFu
-  RAILS_CONFIG_ROOT = defined?(RAILS_ROOT) ? "#{RAILS_ROOT}/config" : "#{File.dirname(__FILE__)}/../templates"
-  @config = YAML::load(File.open("#{RAILS_CONFIG_ROOT}/sms_fu.yml"))
-  @@carriers = @config['carriers']
-
+  RAILS_CONFIG_ROOT = defined?(RAILS_ROOT) ? "#{RAILS_ROOT}/config" : "#{File.dirname(__FILE__)}/../templates" unless defined?(RAILS_CONFIG_ROOT)
+  @config ||= YAML::load(File.open("#{RAILS_CONFIG_ROOT}/sms_fu.yml"))
+  @@carriers ||= @config['carriers']
+  
+  def self.carriers
+    @@carriers.dup
+  end
+  
   def deliver_sms(number,carrier,message,options={})
     number = format_number(number)
     raise SMSFuException.new("Cannot deliver an empty message to #{number}") if message.nil? or message.empty?
