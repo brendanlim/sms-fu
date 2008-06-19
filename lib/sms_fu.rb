@@ -1,4 +1,5 @@
 require 'yaml'
+require 'sms_notifier'
 # Copyright (c) 2008 Brendan G. Lim (brendangl@gmail.com)
 # 
 # Permission is hereby granted, free of charge, to any person obtaining
