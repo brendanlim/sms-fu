@@ -1,3 +1,15 @@
+commit 3912b0b91621ba1a827585f3b22c1426fc70c9e4
+Author: Brendan G. Lim <brendan@intridea.com>
+Date:   Thu Jul 31 13:48:15 2008 -0400
+
+    Adding ability to specify custom from address per mailing
+
+commit 09fc1fa3076082d98b61f7cdf0d10dd5abd30a1a
+Author: Brendan G. Lim <brendan@intridea.com>
+Date:   Thu Jun 19 02:18:09 2008 -0400
+
+    Updating CHANGELOG
+
 commit f1026d0aca169caf57dd44e57661177bd66e2e37
 Author: Brendan G. Lim <brendan@intridea.com>
 Date:   Thu Jun 19 02:17:08 2008 -0400
