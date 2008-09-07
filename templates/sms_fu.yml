@@ -21,9 +21,18 @@ carriers:
   t-mobile: @tmomail.net
   virgin: @vmobl.net
   verizon: @vtext.com
+  # Canadian Carriers
+  aliant: @chat.wirefree.ca
+  bellmobility: @txt.bell.ca
+  fido-canada: @fido.ca
+  manitobatelecom: @text.mtsmobility.com
+  northerntel: @txt.northerntelmobility.com
+  rogers: @pcs.rogers.ca
+  sasktel: @sms.sasktel.ca
+  telebec: @txt.telebecmobilite.com
+  telus: @msg.telus.com
   # International Carriers
   e-plus-germany: @smsmail.eplus.de
-  fido-canada: @fido.ca
   o2-germany: @o2online.de
   o2-uk: @mmail.co.uk
   orange-netherlands: @sms.orange.nl
