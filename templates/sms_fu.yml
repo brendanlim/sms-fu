@@ -19,15 +19,19 @@ carriers:
   sprint: @messaging.sprintpcs.com
   suncom: @tms.suncom.com
   t-mobile: @tmomail.net
+  telus-mobility: @msg.telus.com
   virgin: @vmobl.net
   verizon: @vtext.com
   # International Carriers
   e-plus-germany: @smsmail.eplus.de
   fido-canada: @fido.ca
+  mobinil: @mobinil.net
+  movistar: @correo.movistar.net
   o2-germany: @o2online.de
   o2-uk: @mmail.co.uk
   orange-netherlands: @sms.orange.nl
   orange-uk: @orange.net
+  rogers-wireless: @pcs.rogers.com
   t-mobile-austria: @sms.t-mobile.at
   t-mobile-germany: @t-d1-sms.de
   t-mobile-uk: @t-mobile.uk.net
