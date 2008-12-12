@@ -26,6 +26,7 @@ carriers:
   e-plus-germany: @smsmail.eplus.de
   fido-canada: @fido.ca
   mobinil: @mobinil.net
+  mobitel: @sms.mobitel.lk
   movistar: @correo.movistar.net
   o2-germany: @o2online.de
   o2-uk: @mmail.co.uk
@@ -36,9 +37,11 @@ carriers:
   t-mobile-germany: @t-d1-sms.de
   t-mobile-uk: @t-mobile.uk.net
   telefonica-spain: @movistar.net
+  virgin-canada: @vmobile.ca 
+  vodafone-egypt: @vodafone.com.eg
   vodafone-germany: @vodafone-sms.de
-  vodafone-uk: @sms.vodafone.net
   vodafone-italy: @sms.vodafone.it
+  vodafone-uk: @sms.vodafone.net
   vodafone-jp-chuugoku: @n.vodafone.ne.jp
   vodafone-jp-hokkaido: @d.vodafone.ne.jp
   vodafone-jp-hokuriko: @r.vodafone.ne.jp
