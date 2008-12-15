@@ -23,11 +23,12 @@ carriers:
   virgin: @vmobl.net
   verizon: @vtext.com
   # International Carriers
+  du-arab-emirates: @email2sms.ae
   e-plus-germany: @smsmail.eplus.de
+  etisalat-arab-emirates: @email2sms.ae
   fido-canada: @fido.ca
-  mobinil: @mobinil.net
-  mobitel: @sms.mobitel.lk
-  movistar: @correo.movistar.net
+  mobinil-egypt: @mobinil.net
+  movistar-spain: @correo.movistar.net
   o2-germany: @o2online.de
   o2-uk: @mmail.co.uk
   orange-netherlands: @sms.orange.nl
@@ -38,10 +39,10 @@ carriers:
   t-mobile-uk: @t-mobile.uk.net
   telefonica-spain: @movistar.net
   virgin-canada: @vmobile.ca 
-  vodafone-egypt: @vodafone.com.eg
   vodafone-germany: @vodafone-sms.de
-  vodafone-italy: @sms.vodafone.it
+  vodafone-egypt: @vodafone.com.eg
   vodafone-uk: @sms.vodafone.net
+  vodafone-italy: @sms.vodafone.it
   vodafone-jp-chuugoku: @n.vodafone.ne.jp
   vodafone-jp-hokkaido: @d.vodafone.ne.jp
   vodafone-jp-hokuriko: @r.vodafone.ne.jp
