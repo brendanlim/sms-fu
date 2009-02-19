@@ -1,3 +1,15 @@
+commit 8abc7168dd392b083fdfd3a9cb2ce1e7c1d068a0
+Author: Brendan G. Lim <brendan@intridea.com>
+Date:   Wed Feb 18 20:25:05 2009 -0500
+
+    Some structural changes to SMS Fu
+
+commit 4e5aa349ac9d4c12da5d53de08d1fd3281bcfa0d
+Author: Brendan G. Lim <brendan@intridea.com>
+Date:   Wed Feb 18 20:12:55 2009 -0500
+
+    Updating CHANGELOG
+
 commit 4c1b777458b90de5d7c01cf7d14ef0be2fdcc4e6
 Author: Brendan G. Lim <brendan@intridea.com>
 Date:   Wed Feb 18 20:12:33 2009 -0500
