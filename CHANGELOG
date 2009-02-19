@@ -1,3 +1,33 @@
+commit 4c1b777458b90de5d7c01cf7d14ef0be2fdcc4e6
+Author: Brendan G. Lim <brendan@intridea.com>
+Date:   Wed Feb 18 20:12:33 2009 -0500
+
+    Adding in some view helpers for mobile carrier select boxes and updating README
+
+commit 0d804bdd6e48aa3eae548665c4740b2e2d4e3b86
+Author: Brendan G. Lim <brendan@intridea.com>
+Date:   Mon Dec 15 14:17:16 2008 -0500
+
+    Adding Etisalat support and adding country designation to mobinil and movistar
+
+commit 0d417e1f30f5b153e9658e5649144630b95c2ec1
+Author: Brendan G. Lim <brendan@intridea.com>
+Date:   Thu Dec 11 19:09:20 2008 -0500
+
+    Adding Vodafone Egypt, Virgin Mobile Canada, and Mobitel Sri Lanka to supported SMS carriers
+
+commit ec20bd73afe7c26583bcdb7037028161f65cc8a5
+Author: Brendan G. Lim <brendan@intridea.com>
+Date:   Thu Dec 11 13:31:17 2008 -0500
+
+    Adding a good chunk of carriers into SMS Fu
+
+commit 8d9a829177f6a249206892ccc7a13b8ae5467496
+Author: Brendan G. Lim <brendan@intridea.com>
+Date:   Thu Jul 31 13:48:30 2008 -0400
+
+    Upating the CHANGELOG
+
 commit 3912b0b91621ba1a827585f3b22c1426fc70c9e4
 Author: Brendan G. Lim <brendan@intridea.com>
 Date:   Thu Jul 31 13:48:15 2008 -0400
