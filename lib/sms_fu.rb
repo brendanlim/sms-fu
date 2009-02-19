@@ -58,7 +58,7 @@ module SMSFu
   end
   
   def is_valid?(number)
-    return (number.length >= 10 && number[/^.\d+$/]) ? true : false
+    number.length >= 10 && number[/^.\d+$/]
   end  
   
   def determine_sms_email(phone_number, carrier)

@@ -7,9 +7,10 @@ of the supported carriers.
 == Supported Carriers (US & International): 
 
 Alltel, Ameritech, AT&T, BellSouth Mobility, BlueSkyFrog, Boost Mobile, Cellular South, 
-E-Plus, Fido, kajeet, Metro PCS, Powertel, PSC Wireless, Qwest, Southern Link, Sprint, 
-Suncom, T-Mobile (US/UK/Germany), Telefonica, Virgin Mobile, Verizon Wireless, 
-Vodafone (UK,Italy,Japan, Spain)
+Du, E-Plus, Etisalat, Fido, kajeet, Mobinil, Mobitel, Movistar, Metro PCS, Powertel, 
+PSC Wireless, Qwest,  Rogers, Southern Link,  Sprint, Suncom, T-Mobile (US/UK/Germany), 
+Telefonica, Virgin Mobile,  Verizon Wireless, Vodafone (UK, Egypt, Italy, Japan, Spain),
+and many more ...
 
 == Setup Instructions
 
@@ -60,5 +61,18 @@ That's it!  Now you're good to go.
 
     get_sms_address("5558675309","at&t") # => "5558675309@txt.att.net"
 
+== View Helpers
+
+* Retrieve a collection of all carriers
+
+    <%= carrier_collection %>
+
+* Display a select box with mobile carriers
+
+    <%= carrier_select %>
+    
+* Display a custom select box with mobile carriers
+
+    <%= carrier_select('user[carrier_name]', "Please choose a carrier") %>
 
 Copyright (c) 2008 Brendan G. Lim, Intridea, Inc., released under the MIT license

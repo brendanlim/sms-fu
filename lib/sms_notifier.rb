@@ -27,7 +27,6 @@ class SmsNotifier < ActionMailer::Base
     content_type      "text/plain"
     recipients        recipient
     from              sender_email
-    
     body['message'] = message
   end
 
