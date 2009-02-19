@@ -17,7 +17,7 @@ and many more ...
 Add this this one line to the controller you want to be able to use SMS Fu in.
 
     class ExampleController < ApplicationController
-      include SMSFu
+      has_sms_fu
     end
 
 Modify sms_fu.yml in your config folder with your reply-to e-mail address.
