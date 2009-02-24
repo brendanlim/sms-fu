@@ -3,9 +3,9 @@ config:
   
 carriers:
   # US Carriers
-  alltell: 
-    name: Alltell
-    value: @message.alltell.com
+  alltel: 
+    name: Alltel
+    value: @message.alltel.com
   ameritech:
     name: Ameritech
     value: @paging.acswireless.com
