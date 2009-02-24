@@ -23,6 +23,7 @@ carriers:
   virgin: @vmobl.net
   verizon: @vtext.com
   # International Carriers
+  beeline_ua: @sms.beeline.ua
   du-arab-emirates: @email2sms.ae
   e-plus-germany: @smsmail.eplus.de
   etisalat-arab-emirates: @email2sms.ae
