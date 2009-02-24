@@ -6,10 +6,13 @@ carriers:
   alltell: @message.alltell.com
   ameritech: @paging.acswireless.com  
   at&t: @txt.att.net
+  bell-atlantic: @message.bam.com
   bellsouthmobility: @blsdcs.net
   blueskyfrog: @blueskyfrog.com
   boost: @myboostmobile.com
   cellularsouth: @csouth1.com
+  comcast: @comcastpcs.textmsg.com
+  cricket: @sms.mycricket.com
   kajeet: @mobile.kajeet.net
   metropcs: @mymetropcs.com
   powertel: @ptel.net
@@ -19,11 +22,15 @@ carriers:
   sprint: @messaging.sprintpcs.com
   suncom: @tms.suncom.com
   t-mobile: @tmomail.net
+  tracfone: @mmst5.tracfone.com
   telus-mobility: @msg.telus.com
   virgin: @vmobl.net
   verizon: @vtext.com
   # International Carriers
   beeline_ua: @sms.beeline.ua
+  bpl-mobile: @bplmobile.com
+  claro-brazil: @clarotorpedo.com.br
+  claro-nicaragua: @ideasclaro-ca.com
   du-arab-emirates: @email2sms.ae
   e-plus-germany: @smsmail.eplus.de
   etisalat-arab-emirates: @email2sms.ae

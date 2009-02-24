@@ -6,11 +6,12 @@ of the supported carriers.
 
 == Supported Carriers (US & International): 
 
-Alltel, Ameritech, AT&T, BellSouth Mobility, Beeline(UA), BlueSkyFrog, Boost Mobile, 
-Cellular South, Du, E-Plus, Etisalat, Fido, kajeet, Mobinil, Mobitel, Movistar, Metro PCS, 
-Powertel, PSC Wireless, Qwest,  Rogers, Southern Link,  Sprint, Suncom, T-Mobile (US/UK/Germany), 
-Telefonica, Virgin Mobile,  Verizon Wireless, Vodafone (UK, Egypt, Italy, Japan, Spain),
-and many more ...
+Alltel, Ameritech, AT&T, Bell Atlantic, BellSouth Mobility, Beeline(UA), BlueSkyFrog, 
+Boost Mobile, BPL Mobile, Cellular South, Claro (Brazil, Nicaragua), Comcast, Du, 
+E-Plus, Etisalat, Fido, kajeet, Mobinil, Mobitel, Movistar, Metro PCS, O2, Orange, 
+Powertel, PSC Wireless, Qwest, Rogers, Southern Link, Sprint, Suncom, 
+T-Mobile (US/UK/Germany), Telefonica, Tracfone, Virgin Mobile, Verizon Wireless, 
+Vodafone (UK, Egypt, Italy, Japan, Spain), and many more ...
 
 == Setup Instructions
 
