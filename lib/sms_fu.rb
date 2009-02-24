@@ -71,7 +71,7 @@ module SMSFu
 
   def determine_sms_email(phone_number, carrier)
     if @@carriers.has_key?(carrier.downcase)
-      "#{phone_number}#{@@carriers[carrier.downcase]}"
+      "#{phone_number}#{@@carriers[carrier.downcase]['value']}"
     else 
       raise SMSFuException.new("Specified carrier, #{carrier} is not supported.")
     end

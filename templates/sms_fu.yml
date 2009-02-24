@@ -3,67 +3,193 @@ config:
   
 carriers:
   # US Carriers
-  alltell: @message.alltell.com
-  ameritech: @paging.acswireless.com  
-  at&t: @txt.att.net
-  bell-atlantic: @message.bam.com
-  bellsouthmobility: @blsdcs.net
-  blueskyfrog: @blueskyfrog.com
-  boost: @myboostmobile.com
-  cellularsouth: @csouth1.com
-  comcast: @comcastpcs.textmsg.com
-  cricket: @sms.mycricket.com
-  kajeet: @mobile.kajeet.net
-  metropcs: @mymetropcs.com
-  powertel: @ptel.net
-  pscwireless: @sms.pscel.com
-  qwest: @qwestmp.com
-  southernlink: @page.southernlinc.com
-  sprint: @messaging.sprintpcs.com
-  suncom: @tms.suncom.com
-  t-mobile: @tmomail.net
-  tracfone: @mmst5.tracfone.com
-  telus-mobility: @msg.telus.com
-  virgin: @vmobl.net
-  verizon: @vtext.com
+  alltell: 
+    name: Alltell
+    value: @message.alltell.com
+  ameritech:
+    name: Ameritech
+    value: @paging.acswireless.com
+  at&t: 
+    name: AT&T
+    value: @txt.att.net
+  bell-atlantic: 
+    name: Bell Atlantic
+    value: @message.bam.com
+  bellsouthmobility: 
+    name: Bellsouth Mobility
+    value: @blsdcs.net
+  blueskyfrog: 
+    name: BlueSkyFrog
+    valye: @blueskyfrog.com
+  boost: 
+    name: Boost Mobile
+    value: @myboostmobile.com
+  cellularsouth: 
+    name: Cellular South
+    value: @csouth1.com
+  comcast: 
+    name: Comcast PCS
+    value: @comcastpcs.textmsg.com
+  cricket: 
+    name: Cricket
+    value: @sms.mycricket.com
+  kajeet: 
+    name: kajeet
+    value: @mobile.kajeet.net
+  metropcs: 
+    name: Metro PCS
+    value: @mymetropcs.com
+  powertel: 
+    name: Powertel
+    value: @ptel.net
+  pscwireless: 
+    name: PSC Wireless
+    value: @sms.pscel.com
+  qwest: 
+    name: Qwest
+    value: @qwestmp.com
+  southernlink: 
+    name: Southern Link
+    value: @page.southernlinc.com
+  sprint: 
+    name: Sprint PCS
+    value: @messaging.sprintpcs.com
+  suncom: 
+    name: Suncom
+    value: @tms.suncom.com
+  t-mobile: 
+    name: T-Mobile
+    value: @tmomail.net
+  tracfone: 
+    name: Tracfone
+    value: @mmst5.tracfone.com
+  telus-mobility: 
+    name: Telus Mobility
+    value: @msg.telus.com
+  virgin: 
+    name: Virgin Mobile
+    value: @vmobl.net
+  verizon: 
+    name: Verizon Wireless
+    value: @vtext.com
   # International Carriers
-  beeline_ua: @sms.beeline.ua
-  bpl-mobile: @bplmobile.com
-  claro-brazil: @clarotorpedo.com.br
-  claro-nicaragua: @ideasclaro-ca.com
-  du-arab-emirates: @email2sms.ae
-  e-plus-germany: @smsmail.eplus.de
-  etisalat-arab-emirates: @email2sms.ae
-  fido-canada: @fido.ca
-  mobinil-egypt: @mobinil.net
-  mobitel: @sms.mobitel.lk
-  movistar-spain: @correo.movistar.net
-  o2-germany: @o2online.de
-  o2-uk: @mmail.co.uk
-  orange-netherlands: @sms.orange.nl
-  orange-uk: @orange.net
-  rogers-wireless: @pcs.rogers.com
-  t-mobile-austria: @sms.t-mobile.at
-  t-mobile-germany: @t-d1-sms.de
-  t-mobile-uk: @t-mobile.uk.net
-  telefonica-spain: @movistar.net
-  virgin-canada: @vmobile.ca 
-  vodafone-germany: @vodafone-sms.de
-  vodafone-egypt: @vodafone.com.eg
-  vodafone-uk: @sms.vodafone.net
-  vodafone-italy: @sms.vodafone.it
-  vodafone-jp-chuugoku: @n.vodafone.ne.jp
-  vodafone-jp-hokkaido: @d.vodafone.ne.jp
-  vodafone-jp-hokuriko: @r.vodafone.ne.jp
-  vodafone-jp-kansai: @k.vodafone.ne.jp
-  vodafone-jp-osaka: @k.vodafone.ne.jp
-  vodafone-jp-kanto: @k.vodafone.ne.jp
-  vodafone-jp-koushin: @k.vodafone.ne.jp
-  vodafone-jp-tokyo: @k.vodafone.ne.jp
-  vodafone-jp-kyuushu: @q.vodafone.ne.jp
-  vodafone-jp-okinawa: @q.vodafone.ne.jp
-  vodafone-jp-shikoku: @s.vodafone.ne.jp
-  vodafone-jp-touhoku: @h.vodafone.ne.jp
-  vodafone-jp-niigata: @h.vodafone.ne.jp
-  vodafone-jp-toukai: @h.vodafone.ne.jp
-  vodafone-spain: @vodafone.es
+  beeline-ua: 
+    name: Beeline
+    value: @sms.beeline.ua
+  bpl-mobile: 
+    name: BPL Mobile
+    value: @bplmobile.com
+  claro-brazil: 
+    name: Claro (Brazil)
+    value: @clarotorpedo.com.br
+  claro-nicaragua: 
+    name: Claro (Nicaragua)
+    value: @ideasclaro-ca.com
+  du-arab-emirates: 
+    name: Du
+    value: @email2sms.ae
+  e-plus-germany: 
+    name: E-Plus
+    value: @smsmail.eplus.de
+  etisalat-arab-emirates: 
+    name: Etisalat
+    value: @email2sms.ae
+  fido-canada: 
+    name: Fido
+    value: @fido.ca
+  mobinil-egypt: 
+    name: Mobinil
+    value: @mobinil.net
+  mobitel: 
+    name: Mobitel
+    value: @sms.mobitel.lk
+  movistar-spain: 
+    name: Movistar
+    value: @correo.movistar.net
+  o2-germany: 
+    name: o2 (Germany)
+    value: @o2online.de
+  o2-uk: 
+    name: o2 (UK)
+    value: @mmail.co.uk
+  orange-netherlands: 
+    name: Orange (Netherlands)
+    value: @sms.orange.nl
+  orange-uk: 
+    name: Orange (UK)
+    value: @orange.net
+  rogers-wireless: 
+    name: Rogers Wireless
+    value: @pcs.rogers.com
+  t-mobile-austria: 
+    name: T-Mobile (Austria)
+    value: @sms.t-mobile.at
+  t-mobile-germany: 
+    name: T-Mobile (Germany)
+    value: @t-d1-sms.de
+  t-mobile-uk: 
+    name: T-Mobile (UK)
+    value: @t-mobile.uk.net
+  telefonica-spain: 
+    name: Telefonica
+    value: @movistar.net
+  virgin-canada: 
+    name: Virgin Canada
+    value: @vmobile.ca 
+  vodafone-germany: 
+    name: Vodafone (Germany)
+    value: @vodafone-sms.de
+  vodafone-egypt: 
+    name: Vodafone (Egypt)
+    value: @vodafone.com.eg
+  vodafone-uk: 
+    name: Vodafone (UK)
+    value: @sms.vodafone.net
+  vodafone-italy: 
+    name: Vodafone (Italy)
+    value: @sms.vodafone.it
+  vodafone-jp-chuugoku: 
+    name: Vodafone (Japan - Chuugoku)
+    value: @n.vodafone.ne.jp
+  vodafone-jp-hokkaido: 
+    name: Vodafone (Japan - Hokkaido)
+    value: @d.vodafone.ne.jp
+  vodafone-jp-hokuriko: 
+    name: Vodafone (Japan - Hokuriko)
+    value: @r.vodafone.ne.jp
+  vodafone-jp-kansai: 
+    name: Vodafone (Japan - Kansai)
+    value: @k.vodafone.ne.jp
+  vodafone-jp-osaka: 
+    name: Vodafone (Japan - Osaka)
+    value: @k.vodafone.ne.jp
+  vodafone-jp-kanto: 
+    name: Vodafone (Japan - Kanto)
+    value: @k.vodafone.ne.jp
+  vodafone-jp-koushin: 
+    name: Vodafone (Japan - Koushin)
+    value: @k.vodafone.ne.jp
+  vodafone-jp-tokyo: 
+    name: Vodafone (Japan - Tokyo)
+    value: @k.vodafone.ne.jp
+  vodafone-jp-kyuushu: 
+    name: Vodafone (Japan - Kyuushu)
+    value: @q.vodafone.ne.jp
+  vodafone-jp-okinawa: 
+    name: Vodafone (Japan - Okinawa)
+    value: @q.vodafone.ne.jp
+  vodafone-jp-shikoku: 
+    name: Vodafone (Japan - Shikoku)
+    value: @s.vodafone.ne.jp
+  vodafone-jp-touhoku: 
+    name: Vodafone (Japan - Touhoku)
+    value: @h.vodafone.ne.jp
+  vodafone-jp-niigata: 
+    name: Vodafone (Japan - Niigata)
+    value: @h.vodafone.ne.jp
+  vodafone-jp-toukai: 
+    name: Vodafone (Japan - Toukai)
+    value: @h.vodafone.ne.jp
+  vodafone-spain: 
+    name: Vodafone (Japan - Spain)
+    value: @vodafone.es
