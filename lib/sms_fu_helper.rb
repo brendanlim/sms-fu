@@ -12,4 +12,8 @@ module SMSFuHelper
   def carrier_select(name = :mobile_carrier, phrase = "Select a Carrier")
     select_tag name, options_for_select([phrase,nil]+carrier_collection, phrase)
   end
+
+  def carrier_select_default(name = :mobile_carrier, default = nil)
+    select_tag name, options_for_select([nil]+carrier_collection, default)
+  end
 end
