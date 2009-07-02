@@ -127,6 +127,9 @@ carriers:
   rogers-wireless: 
     name: Rogers Wireless
     value: @pcs.rogers.com
+  sfr-france: 
+    name: SFR (France)
+    value: @sfr.fr
   t-mobile-austria: 
     name: T-Mobile (Austria)
     value: @sms.t-mobile.at
