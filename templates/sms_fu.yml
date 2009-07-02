@@ -100,6 +100,9 @@ carriers:
   mobinil-egypt: 
     name: Mobinil
     value: @mobinil.net
+  mobistar-belgium: 
+    name: Mobistar (Belgium)
+    value: @mobistar.be
   mobitel: 
     name: Mobitel
     value: @sms.mobitel.lk
@@ -112,6 +115,9 @@ carriers:
   o2-uk: 
     name: o2 (UK)
     value: @mmail.co.uk
+  orange-mumbai: 
+    name: Orange (Mumbai)
+    value: @orangemail.co.in
   orange-netherlands: 
     name: Orange (Netherlands)
     value: @sms.orange.nl
@@ -127,6 +133,9 @@ carriers:
   t-mobile-germany: 
     name: T-Mobile (Germany)
     value: @t-d1-sms.de
+  t-mobile-germany: 
+    name: T-Mobile (Netherlands)
+    value: @gin.nl
   t-mobile-uk: 
     name: T-Mobile (UK)
     value: @t-mobile.uk.net
