@@ -23,6 +23,7 @@ Gem::Specification.new do |s|
      "lib/sms_fu.rb",
      "lib/sms_fu_helper.rb",
      "lib/sms_notifier.rb",
+     "sms-fu.gemspec",
      "tasks/sms_fu_tasks.rake",
      "templates/sms_fu.yml",
      "test/sms_fu_test.rb",
