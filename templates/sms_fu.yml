@@ -38,6 +38,9 @@ carriers:
   metropcs: 
     name: Metro PCS
     value: @mymetropcs.com
+  nextel:
+    name: Nextel
+    value: @messaging.nextel.com
   powertel: 
     name: Powertel
     value: @ptel.net
