@@ -30,7 +30,13 @@ module SMSFu
     end
   end
 
-  RAILS_CONFIG_ROOT = defined?(RAILS_ROOT) ? "#{RAILS_ROOT}/config" : "#{File.dirname(__FILE__)}/../templates" unless defined?(RAILS_CONFIG_ROOT)
+  RAILS_CONFIG_ROOT = defined?(Rails) ?
+          Rails.env == 'test' ?
+            "#{File.dirname(__FILE__)}/../templates" :
+            "#{RAILS_ROOT}/config" :
+          RAILS_ENV == 'test' ?
+            "#{File.dirname(__FILE__)}/../templates" :
+            "#{RAILS_ROOT}/config"
   @config     ||= YAML::load(File.open("#{RAILS_CONFIG_ROOT}/sms_fu.yml"))
   @@carriers  ||= @config['carriers'] 
   @@from_address = @config['config']['from_address']
