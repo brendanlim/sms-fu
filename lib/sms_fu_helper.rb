@@ -9,8 +9,9 @@ module SMSFuHelper
   # e.g., <%= carrier_select %>
   # - name => name of the method in which you want to store the carrier name
   # - phrase => default selected blank option in select box 
-  def carrier_select(name = :mobile_carrier, phrase = "Select a Carrier")
-    select_tag name, options_for_select([phrase,nil]+carrier_collection, phrase)
+  # - selected => carrier to pre-select
+  def carrier_select(name = :mobile_carrier, phrase = "Select a Carrier", selected = nil)
+    select_tag name, options_for_select([phrase,nil]+carrier_collection, selected || phrase)
   end
 
   def carrier_select_default(name = :mobile_carrier, default = nil)
