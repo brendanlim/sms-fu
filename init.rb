@@ -1,5 +1,6 @@
-require "action_mailer"
-require File.dirname(__FILE__) + '/lib/sms_fu' 
-require File.dirname(__FILE__) + '/lib/sms_fu_helper.rb'
+require 'actionmailer'
+require 'sms_fu'
+require 'sms_fu_helper'
+
 ActionController::Base.send(:include, SMSFu)
 ActionView::Base.send(:include, SMSFuHelper)

@@ -21,7 +21,6 @@ require 'yaml'
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 class SmsNotifier < ActionMailer::Base
-  @config = YAML::load(File.open("#{RAILS_ROOT}/config/sms_fu.yml"))
 
   def sms_message(recipient, message, sender_email)
     content_type      "text/plain"

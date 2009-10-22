@@ -1,5 +1,4 @@
-require 'test/unit'
-require 'sms_fu'
+require File.dirname(__FILE__) + '/test_helper'
 
 class SmsFuTest < Test::Unit::TestCase
   include SMSFu
