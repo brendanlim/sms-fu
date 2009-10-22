@@ -2,7 +2,7 @@ module SMSFuHelper
   # Returns a collection of carriers to be used in your own select tag
   # e.g., <%= f.select :mobile_carrier, carrier_collection %>
   def carrier_collection
-    SMSFu.carriers.sort.collect{ |carrier| [carrier[1]["name"], carrier[0]] }
+    SMSFu.carriers.sort.collect{ |carrier| [carrier[1]["name"], [carrier[1]["value"]] }
   end
   
   # Returns a formatted select box filled with carriers
@@ -14,7 +14,4 @@ module SMSFuHelper
     select_tag name, options_for_select([phrase,nil]+carrier_collection, selected || phrase)
   end
 
-  def carrier_select_default(name = :mobile_carrier, default = nil)
-    select_tag name, options_for_select([nil]+carrier_collection, default)
-  end
 end
