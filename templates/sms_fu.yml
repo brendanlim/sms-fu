@@ -2,8 +2,7 @@ config:
   from_address: noreply@domain.com
   
 carriers:
-  # US Carriers
-  alltel: 
+  alltel:
     name: Alltel
     value: @message.alltel.com
   ameritech:
@@ -15,7 +14,7 @@ carriers:
   bell-atlantic: 
     name: Bell Atlantic
     value: @message.bam.com
-  bellsouthmobility: 
+  bellsouthmobility:
     name: Bellsouth Mobility
     value: @blsdcs.net
   blueskyfrog: 
@@ -73,31 +72,40 @@ carriers:
     name: Verizon Wireless
     value: @vtext.com
   # International Carriers
+  aliant-canada:
+    name: Aliant (Canada)
+    value: @chat.wirefree.ca
   beeline-ua: 
     name: Beeline
     value: @sms.beeline.ua
+  bellmobility-canada:
+    name: Bell Mobility (Canada)
+    value: @txt.bell.ca
   bpl-mobile: 
     name: BPL Mobile
     value: @bplmobile.com
-  claro-brazil: 
+  claro-brazil:
     name: Claro (Brazil)
     value: @clarotorpedo.com.br
   claro-nicaragua: 
     name: Claro (Nicaragua)
     value: @ideasclaro-ca.com
   du-arab-emirates: 
-    name: Du
+    name: Du (UAE)
     value: @email2sms.ae
   e-plus-germany: 
-    name: E-Plus
+    name: E-Plus (Germany)
     value: @smsmail.eplus.de
   etisalat-arab-emirates: 
-    name: Etisalat
+    name: Etisalat (UAE)
     value: @email2sms.ae
   fido-canada: 
     name: Fido
     value: @fido.ca
-  mobinil-egypt: 
+  manitobatelecom-canada:
+    name: Manitoba Telecom (Canada)
+    value: @text.mtsmobility.com
+  mobinil-egypt:
     name: Mobinil
     value: @mobinil.net
   mobistar-belgium: 
@@ -107,8 +115,11 @@ carriers:
     name: Mobitel
     value: @sms.mobitel.lk
   movistar-spain: 
-    name: Movistar
+    name: Movistar (Spain)
     value: @correo.movistar.net
+  northerntel-canada:
+    name: NorthernTel (Canada)
+    value: @txt.northerntelmobility.com
   o2-germany: 
     name: o2 (Germany)
     value: @o2online.de
@@ -127,6 +138,12 @@ carriers:
   rogers-wireless: 
     name: Rogers Wireless
     value: @pcs.rogers.com
+  rogers-canada:
+    name: Rogers (Canada)
+    value: @pcs.rogers.ca
+  sasktel-canada:
+    name: SaskTel (canada)
+    value: @sms.sasktel.ca
   sfr-france: 
     name: SFR (France)
     value: @sfr.fr
@@ -142,11 +159,17 @@ carriers:
   t-mobile-uk: 
     name: T-Mobile (UK)
     value: @t-mobile.uk.net
+  telebec-canada:
+    name: Telebec (Canada)
+    value: @txt.telebecmobilite.com
   telefonica-spain: 
-    name: Telefonica
+    name: Telefonica (Spain)
     value: @movistar.net
-  virgin-canada: 
-    name: Virgin Canada
+  telus-canada:
+    name: Telus (Canada)
+    value: @msg.telus.com
+  virgin-canada:
+    name: Virgin (Canada)
     value: @vmobile.ca 
   vodafone-germany: 
     name: Vodafone (Germany)
