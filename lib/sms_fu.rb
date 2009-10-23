@@ -41,6 +41,10 @@ module SMSFu
   @@carriers  ||= @config['carriers'] 
   @@from_address = @config['config']['from_address']
 
+  def self.carrier_name(key)
+    carriers[key]['name']
+  end
+
   def self.carriers
     @@carriers.dup
   end
