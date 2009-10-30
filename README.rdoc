@@ -88,7 +88,7 @@ That's it!  Now you're good to go.
 
 == Special Thanks
 
-I want to thank the following individuals with their help with SMS Fu:
+I want to thank the following individuals with their help with adding some patches to SMS Fu:
 
 * Brent Collier (brentmc79)
 * Peter Boling (pboling)
