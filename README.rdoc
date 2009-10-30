@@ -86,4 +86,12 @@ That's it!  Now you're good to go.
 
     <%= carrier_select('user[carrier_name]', "Please choose a carrier") %>
 
+== Special Thanks
+
+I want to thank the following individuals with their help with SMS Fu:
+
+* Brent Collier (brentmc79)
+* Peter Boling (pboling)
+* Mike (mic)
+
 Copyright (c) 2008 Brendan G. Lim, Intridea, Inc., released under the MIT license

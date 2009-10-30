@@ -1,3 +1,175 @@
+commit f93349785ebcc991bec1b463712d7cfef04fb91b
+Author: pboling <peter.boling@peterboling.com>
+Date:   Fri Oct 23 03:00:06 2009 -0400
+
+    default phrase should not force a blank option tag, now it is optional
+
+commit f77d6d076da2785da5c06e569c9891ba4b198c48
+Author: pboling <peter.boling@peterboling.com>
+Date:   Fri Oct 23 02:23:41 2009 -0400
+
+    added SMSFu.carrier_name(key) to lookup carrier names in the YAML
+
+commit aca2e94475da51114771fec3e29cbf2d69fc77b9
+Author: mike castleman <m@mlcastle.net>
+Date:   Thu Oct 22 18:03:44 2009 -0400
+
+    add nextel to default YAML
+
+commit 8ce7858e829bb409febe5da6e47fa7d2a691e3d2
+Author: pboling <peter.boling@peterboling.com>
+Date:   Thu Oct 22 15:37:50 2009 -0400
+
+    improved setting of RAILS_CONFIG_ROOT
+
+commit e010096f2a9c1f5ddecbad998051b210ba47b3dd
+Author: pboling <peter.boling@peterboling.com>
+Date:   Thu Oct 22 14:59:23 2009 -0400
+
+    fixed tests so that they actually run (and all pass)
+
+commit 0411f1f60ae8be13ac4a732a48e44d3153441002
+Merge: d5a7437 17f23b1
+Author: pboling <peter.boling@peterboling.com>
+Date:   Thu Oct 22 13:51:32 2009 -0400
+
+    Added 8 Canadian Carriers
+
+commit d5a74370ef16af4514d3b9d01983ba3f7b1efb41
+Author: pboling <peter.boling@peterboling.com>
+Date:   Thu Oct 22 13:38:16 2009 -0400
+
+    merge mlc/master
+
+commit f31a115d9a0b4b54913c3c9c79d4b0ce605f8448
+Merge: efd3df6 cd5fc17
+Author: pboling <peter.boling@peterboling.com>
+Date:   Thu Oct 22 13:33:51 2009 -0400
+
+    Merge commit 'mlc/master'
+
+commit efd3df69b9e232f40cacc0e0b94115e7a57e0238
+Author: pboling <peter.boling@peterboling.com>
+Date:   Thu Oct 22 13:33:01 2009 -0400
+
+    merge adamalex/master and added .gitignore
+
+commit 78a08891eb6d9b7b3b3ac78f531c5f4df35fce1c
+Merge: 05679c8 a699a9e
+Author: pboling <peter.boling@peterboling.com>
+Date:   Thu Oct 22 13:28:53 2009 -0400
+
+    Merge commit 'adamalex/master'
+
+commit cd5fc1743e976e35cbaeeba2a3fcf2bf1ad3c5fd
+Author: mike castleman <m@mlcastle.net>
+Date:   Tue Sep 29 16:39:45 2009 -0400
+
+    in carrier_select, allow caller to pre-select a carrier
+
+commit 05679c809195764832f62f9739032a7693d54f78
+Author: Brendan G. Lim <brendangl@gmail.com>
+Date:   Tue Aug 4 00:11:50 2009 -0400
+
+    Fixing typo in yml for BlueSkyFrog
+
+commit b0fd12533cc998618d41c27f2ec18334bf62afe2
+Author: Brendan G. Lim <brendangl@gmail.com>
+Date:   Mon Jul 20 19:15:18 2009 -0400
+
+    Regenerated gemspec for version 1.0.0
+
+commit a9f07f6502b70143058219f8966cb7dc8b237d66
+Author: Brendan G. Lim <brendangl@gmail.com>
+Date:   Mon Jul 20 19:15:09 2009 -0400
+
+    Adding in gemspec
+
+commit 74d6e1c9a109d2b576df148a01a34a9548c1ffd6
+Author: Brendan G. Lim <brendangl@gmail.com>
+Date:   Mon Jul 20 19:13:41 2009 -0400
+
+    Version bump to 0.0.0
+
+commit 899050db2a8877fe508738811c121247571aaea2
+Author: Brendan G. Lim <brendangl@gmail.com>
+Date:   Thu Jul 2 11:47:27 2009 -0400
+
+    Adding support for SFR (France)
+
+commit ad7cabcb7eb5ca8001ef187339d382664b1c3e81
+Author: Brendan G. Lim <brendangl@gmail.com>
+Date:   Thu Jul 2 11:40:53 2009 -0400
+
+    Adding Mobistar (Belgium), T-Mobile (Netherlands), and Vodafone (Netherlands) to supporter carrier list
+
+commit a699a9ec3119a717aefdca034b9dacefaab6f57f
+Merge: 03d93f0 15d31df
+Author: Adam Alexander <adamalex@gmail.com>
+Date:   Sun Mar 1 11:49:58 2009 -0500
+
+    Merge commit 'brendanlim/master'
+
+commit 15d31df11aa0d77a688d44955daf9647aad70b2b
+Author: Brent Collier <brentmc79@gmail.com>
+Date:   Sat Feb 28 22:47:53 2009 -0500
+
+    fixin syntax error in helper
+
+commit 1c0903356b8b9ba96acd407e678b84d8fc186c3f
+Author: Brendan G. Lim <brendan@intridea.com>
+Date:   Sat Feb 28 20:54:46 2009 -0500
+
+    fixing some issues with 2.2
+
+commit 03d93f094b43cd1b66e4ca904b6bb895e2afb087
+Author: Adam Alexander <adamalex@gmail.com>
+Date:   Fri Feb 27 06:07:58 2009 -0500
+
+    Added carrier_select_default to allow for providing default value
+
+commit 7c918f19794ed618b10eb2db5d8dc6e6badadbda
+Author: Adam Alexander <adamalex@gmail.com>
+Date:   Fri Feb 27 06:07:17 2009 -0500
+
+    Modified carrier_collection to return carrier name and key
+
+commit 570b1e244ce64ce318d55e778ec629dc5177f6e8
+Author: Brendan G. Lim <brendan@intridea.com>
+Date:   Thu Feb 26 17:20:04 2009 -0500
+
+    Message sent out should be in plain text
+
+commit 752126921ea6948c46ac527b9f4b5a67f72a1048
+Author: Brendan G. Lim <brendan@intridea.com>
+Date:   Tue Feb 24 01:32:35 2009 -0500
+
+    Completely restructing yaml and now showing proper names in select box -- again
+
+commit e06b82db487e937c67a431ad3219a65b187b7827
+Author: Brendan G. Lim <brendan@intridea.com>
+Date:   Tue Feb 24 01:30:30 2009 -0500
+
+    Completely restructing yaml and now showing proper names in select box
+
+commit f17677ff1d47305d0217f56472a3156277eabda7
+Author: Brendan G. Lim <brendan@intridea.com>
+Date:   Mon Feb 23 22:53:58 2009 -0500
+
+    Adding in quite a few more mobile carriers to our supported list
+
+commit 1c7c3d79ee9eeae1b0fd55c9f2654633566d308f
+Author: Brendan G. Lim <brendan@intridea.com>
+Date:   Mon Feb 23 22:44:10 2009 -0500
+
+    Adding in Beeline (UA) to the list of carriers
+
+commit c62df8bf641c3b2e009dd2e64e3585e610778519
+Author: Brendan G. Lim <brendan@intridea.com>
+Date:   Wed Feb 18 20:26:00 2009 -0500
+
+    ... and I'm updating the changelog once again
+
 commit 8abc7168dd392b083fdfd3a9cb2ce1e7c1d068a0
 Author: Brendan G. Lim <brendan@intridea.com>
 Date:   Wed Feb 18 20:25:05 2009 -0500
@@ -33,6 +205,12 @@ Author: Brendan G. Lim <brendan@intridea.com>
 Date:   Thu Dec 11 13:31:17 2008 -0500
 
     Adding a good chunk of carriers into SMS Fu
+
+commit 17f23b116729beaf6dc399d1111f18f0a07b0619
+Author: Michael Edwards <medwards@pilgrim.walledcity.ca>
+Date:   Sat Sep 6 22:00:05 2008 -0600
+
+    added canadian carriers
 
 commit 8d9a829177f6a249206892ccc7a13b8ae5467496
 Author: Brendan G. Lim <brendan@intridea.com>
