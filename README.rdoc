@@ -1,4 +1,4 @@
-= SMS Fu
+= SMS Fu (sms_fu)
 
 Want to send an SMS from your Rails application?  SMS Fu allows you to do just that.  
 It allows you to send a text-message in the form of an e-mail to a cell phone on any
@@ -25,11 +25,17 @@ etc.
 
 == Setup Instructions
 
-Add this this one line to the controller you want to be able to use SMS Fu in.
+Install sms_fu gem
+  
+  sudo gem install sms_fu
 
-    class ExampleController < ApplicationController
-      has_sms_fu
-    end
+Require the sms_fu gem.  Please not that ActionMailer is required.
+
+  # Bundler
+  gem "sms_fu"
+  
+  # Old School
+  config.gem "sms_fu"
 
 Modify sms_fu.yml in your config folder with your reply-to e-mail address.
 
@@ -55,22 +61,22 @@ That's it!  Now you're good to go.
 * <b>Check sms_fu.yml for a complete list of supported carriers, including international
   carriers as well.</b>
 
-    deliver_sms("5558675309","at&t","message")
+    SMSFu.deliver("5558675309","at&t","message")
 
 * If you want to set a custom from e-mail per SMS message, you can do so 
   by doing the following.
 
-    deliver_sms("5558675309","at&t","message", :from => "bob@test.com")
+    SMSFu.deliver("5558675309","at&t","message", :from => "bob@test.com")
 
 * You can set the maximum length of the SMS message, which is not set by
   default.  Most phones can only accept 128 characters.  To do this just 
   specify the limit option.
 
-    deliver_sms("5558675309","at&t","message", :limit => 128)
+    SMSFu.deliver("5558675309","at&t","message", :limit => 128)
 
 * You can retrieve just the formatted address to use in your own mailer.
 
-    get_sms_address("5558675309","at&t") # => "5558675309@txt.att.net"
+    SMSFu.sms_address("5558675309","at&t") # => "5558675309@txt.att.net"
 
 == View Helpers
 

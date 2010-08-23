@@ -1,6 +1,8 @@
 require 'yaml'
+require 'action_mailer'
 require 'sms_notifier'
-# Copyright (c) 2008 Brendan G. Lim (brendangl@gmail.com)
+
+# Copyright (c) 2008-2010 Brendan G. Lim (brendan@intridea.com)
 # 
 # Permission is hereby granted, free of charge, to any person obtaining
 # a copy of this software and associated documentation files (the
@@ -22,70 +24,58 @@ require 'sms_notifier'
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 module SMSFu
-  def self.included(base)
-    base.class_eval do
-      def self.has_sms_fu
-        include SMSFu
-      end
-    end
-  end
-
   RAILS_CONFIG_ROOT = defined?(Rails) ?
-          Rails.env == 'test' ?
-            "#{File.dirname(__FILE__)}/../templates" :
-            "#{RAILS_ROOT}/config" :
-          RAILS_ENV == 'test' ?
-            "#{File.dirname(__FILE__)}/../templates" :
-            "#{RAILS_ROOT}/config"
+    (Rails.env == 'test' ? "#{File.dirname(__FILE__)}/../templates" : "#{RAILS_ROOT}/config") :
+    (defined?(RAILS_ENV) ? (RAILS_ENV == 'test' ? "#{File.dirname(__FILE__)}/../templates" : "#{RAILS_ROOT}/config") : 
+      "#{File.dirname(__FILE__)}/../templates")
+            
   @config     ||= YAML::load(File.open("#{RAILS_CONFIG_ROOT}/sms_fu.yml"))
   @@carriers  ||= @config['carriers'] 
   @@from_address = @config['config']['from_address']
-
-  def self.carrier_name(key)
-    carriers[key]['name']
-  end
-
-  def self.carriers
-    @@carriers.dup
-  end
-
-  def deliver_sms(number,carrier,message,options={})
-    raise SMSFuException.new("Cannot deliver an empty message to #{format_number(number)}") if message.nil? or message.empty?
-
-    options[:limit] ||= message.length
-    options[:from]  ||= @@from_address
-    message = message[0..options[:limit]-1]
-    sms_email = determine_sms_email(format_number(number),carrier)
-
-    SmsNotifier.deliver_sms_message(sms_email,message,options[:from])
-  rescue SMSFuException => exception
-    raise exception
-  end
-
-  def get_sms_address(number,carrier)
-    number = format_number(number)
-    determine_sms_email(number,carrier)
-  end
-
-  private
-
-  def format_number(number)
-    pre_formatted = number.gsub("-","").strip
-    formatted =  (pre_formatted.length == 11 && pre_formatted[0,1] == "1") ? pre_formatted[1..pre_formatted.length] : pre_formatted
-    return is_valid?(formatted) ? formatted : (raise SMSFuException.new("Phone number (#{number}) is not formatted correctly"))
-  end
-
-  def is_valid?(number)
-    number.length >= 10 && number[/^.\d+$/]
-  end  
-
-  def determine_sms_email(phone_number, carrier)
-    if @@carriers.has_key?(carrier.downcase)
-      "#{phone_number}#{@@carriers[carrier.downcase]['value']}"
-    else 
-      raise SMSFuException.new("Specified carrier, #{carrier} is not supported.")
+  
+  class << self
+    def carrier_name(key)
+      carriers[key]['name']
     end
-  end 
+
+    def carriers
+      @@carriers.dup
+    end
+
+    def deliver(number,carrier,message,options={})
+      raise SMSFuException.new("Can't deliver blank message to #{format_number(number)}") if message.nil? or message.empty?
+      options[:limit] ||= message.length
+      options[:from]  ||= @@from_address
+      message = message[0..options[:limit]-1]
+      sms_email = sms_email(format_number(number),carrier)
+
+      SmsNotifier.deliver_sms_message(sms_email,message,options[:from])
+    rescue SMSFuException => exception
+      raise exception
+    end
+
+    def sms_address(number,carrier)
+      number = format_number(number)
+      sms_email(number,carrier)
+    end
+
+    private
+
+    def format_number(number)
+      pre_formatted = number.gsub("-","").strip
+      formatted =  (pre_formatted.length == 11 && pre_formatted[0,1] == "1") ? pre_formatted[1..pre_formatted.length] : pre_formatted
+      return is_valid?(formatted) ? formatted : (raise SMSFuException.new("Phone number (#{number}) is not formatted correctly"))
+    end
+
+    def is_valid?(number)
+      number.length >= 10 && number[/^.\d+$/]
+    end  
+
+    def sms_email(phone_number, carrier)
+      raise SMSFuException.new("Specified carrier, #{carrier} is not supported.") unless @@carriers.has_key?(carrier.downcase)
+      "#{phone_number}#{@@carriers[carrier.downcase]['value']}"
+    end 
+  end
    
   class SMSFuException < StandardError; end
 end
