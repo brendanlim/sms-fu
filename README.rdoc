@@ -1,8 +1,8 @@
 = SMS Fu (sms_fu)
 
-Want to send an SMS from your Rails application?  SMS Fu allows you to do just that.  
-It allows you to send a text-message in the form of an e-mail to a cell phone on any
-of the supported carriers.
+Want to send an SMS from your Ruby application?  SMS Fu allows you to do just that.  
+It allows you to send a text message in the form of an e-mail to a cell phone on any
+of the many supported carriers.
 
 == Supported Carriers (US & International): 
 
