@@ -1,6 +1,1 @@
-require 'actionmailer'
-require 'sms_fu'
-require 'sms_fu_helper'
-
-ActionController::Base.send(:include, SMSFu)
-ActionView::Base.send(:include, SMSFuHelper)
+require File.dirname(__FILE__) + "/rails/init"
