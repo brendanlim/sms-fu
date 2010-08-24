@@ -1,3 +1,33 @@
+commit 36591f0eea341a46b48719e1aefa9f7b464a1b93
+Author: Brendan G. Lim <brendangl@gmail.com>
+Date:   Mon Aug 23 23:12:36 2010 -0400
+
+    Updating readme
+
+commit f04b37c5fadbe2f4058782280cc622461b901c0d
+Author: Brendan G. Lim <brendangl@gmail.com>
+Date:   Mon Aug 23 23:09:01 2010 -0400
+
+    Reorganizing for gem
+
+commit 97ee600bab782955a917cf70c971499bfb6fe1f2
+Author: Brendan G. Lim <brendangl@gmail.com>
+Date:   Mon Aug 23 18:09:09 2010 -0400
+
+    Updating for gem consumption
+
+commit a59ba52a34e86c17a02ee4d4f4a1b08d9b3dccc1
+Author: Brendan G. Lim <brendangl@gmail.com>
+Date:   Fri Oct 30 15:17:21 2009 -0400
+
+    Updating README and CHANGELOG
+
+commit 569bf6f5c0d3f47cc2f4c49771f4ddcc4f196f52
+Author: Brendan G. Lim <brendangl@gmail.com>
+Date:   Fri Oct 30 15:15:08 2009 -0400
+
+    Updating README and CHANGELOG
+
 commit f93349785ebcc991bec1b463712d7cfef04fb91b
 Author: pboling <peter.boling@peterboling.com>
 Date:   Fri Oct 23 03:00:06 2009 -0400
