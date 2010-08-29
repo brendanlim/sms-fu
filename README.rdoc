@@ -29,7 +29,7 @@ etc.
   
   sudo gem install sms_fu
   
-* Make sure you have the 'action_mailer' (>= 3.0.0rc2) or 'pony' (>= 1.0) gem installed.  
+* Make sure you have the 'action_mailer' (>= 3.0.0rc2) or 'pony' (>= 1.0) gem installed.  If you require SMS Fu on an older version of ActionMailer, make sure to use the older plugin version of this gem at: http://github.com/brendanlim/sms-fu/tree/plugin
 
 * Add sms_fu.yml to your config folder (Rails only)
 
@@ -69,29 +69,30 @@ If you would like to use Pony, you can configure it to use :sendmail or :smtp vi
 Pony.  Set the :delivery option to :pony and then make sure to specify the 
 :pony_options as well, if necessary.  
   
-    sms_fu = SMSFu.configure(:delivery => :action_mailer)
+  # ActionMailer delivery
+  sms_fu = SMSFu.configure(:delivery => :action_mailer)
 
-    -- or --
-    
-    sms_fu = SMSFu.configure(:delivery => :pony, :pony_options => { :via => :sendmail })
+  # Pony delivery via Sendmail
+  sms_fu = SMSFu.configure(:delivery => :pony, :pony_options => { :via => :sendmail })
 
-    -- or --
-
-    sms_fu = SMSFu.configure(:delivery => :pony, 
-      :pony_options => { 
-        :via => :smtp, 
-        :via_options => {
-          :address              => 'smtp.gmail.com',
-          :port                 => '587',
-          :user_name            => 'username',
-          :password             => 'password',
-          :authentication       => :plain, 
-          :domain               => "localhost.localdomain"
-          :enable_starttls_auto => true,
-      }})
+  # Pony delivery via SMTP
+  sms_fu = SMSFu.configure(:delivery => :pony, 
+    :pony_options => { 
+      :via => :smtp, 
+      :via_options => {
+        :address              => 'smtp.gmail.com',
+        :port                 => '587',
+        :user_name            => 'username',
+        :password             => 'password',
+        :authentication       => :plain, 
+        :domain               => "localhost.localdomain"
+        :enable_starttls_auto => true,
+    }})
       
 You can view more pony 'via_options' at http://github.com/benprew/pony
       
+* Basic delivery
+
     sms_fu.deliver("5558675309","at&t","message")
 
 * If you want to set a custom from e-mail per SMS message, you can do so 
