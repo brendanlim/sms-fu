@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{sms_fu}
-  s.version = "1.0.3"
+  s.version = "1.1.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Brendan G. Lim"]
@@ -17,8 +17,6 @@ Gem::Specification.new do |s|
      "MIT-LICENSE",
      "README.rdoc",
      "Rakefile",
-     "VERSION",
-     "init.rb",
      "install.rb",
      "lib/sms_fu.rb",
      "lib/sms_fu/sms_fu.rb",
@@ -28,7 +26,6 @@ Gem::Specification.new do |s|
      "tasks/sms_fu_tasks.rake",
      "templates/sms_fu.yml",
      "test/sms_fu_test.rb",
-     "uninstall.rb",
      "views/sms_notifier/sms_message.html.erb"
   ]
   s.has_rdoc = true
@@ -43,11 +40,17 @@ Gem::Specification.new do |s|
 
   if s.respond_to? :specification_version then
     current_version = Gem::Specification::CURRENT_SPECIFICATION_VERSION
-    s.specification_version = 2
+    s.specification_version = 3
 
     if Gem::Version.new(Gem::RubyGemsVersion) >= Gem::Version.new('1.2.0') then
+      s.add_development_dependency(%q<action_mailer>, [">= 3.0.0.rc2"])
+      s.add_development_dependency(%q<pony>, [">= 1.0"])
     else
+      s.add_dependency(%q<action_mailer>, [">= 3.0.0.rc2"])
+      s.add_dependency(%q<pony>, [">= 1.0"])
     end
   else
+    s.add_dependency(%q<action_mailer>, [">= 3.0.0.rc2"])
+    s.add_dependency(%q<pony>, [">= 1.0"])
   end
 end

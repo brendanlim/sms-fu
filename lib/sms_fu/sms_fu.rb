@@ -1,77 +1,88 @@
-# Copyright (c) 2008-2010 Brendan G. Lim (brendan@intridea.com)
-# 
-# Permission is hereby granted, free of charge, to any person obtaining
-# a copy of this software and associated documentation files (the
-# "Software"), to deal in the Software without restriction, including
-# without limitation the rights to use, copy, modify, merge, publish,
-# distribute, sublicense, and/or sell copies of the Software, and to
-# permit persons to whom the Software is furnished to do so, subject to
-# the following conditions:
-# 
-# The above copyright notice and this permission notice shall be
-# included in all copies or substantial portions of the Software.
-# 
-# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-# EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-# NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
-# LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
-# OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
-# WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-module SMSFu
-  RAILS_CONFIG_ROOT = defined?(Rails) ?
-    (Rails.env == 'test' ? "#{File.dirname(__FILE__)}/../templates" : "#{RAILS_ROOT}/config") :
-    (defined?(RAILS_ENV) ? (RAILS_ENV == 'test' ? "#{File.dirname(__FILE__)}/../templates" : "#{RAILS_ROOT}/config") : 
-      "#{File.dirname(__FILE__)}/../templates")
-            
-  @config     ||= YAML::load(File.open("#{RAILS_CONFIG_ROOT}/sms_fu.yml"))
-  @@carriers  ||= @config['carriers'] 
-  @@from_address = @config['config']['from_address']
+class SMSFu
+  DELIVERY_OPTIONS = [:action_mailer, :pony]
   
-  class << self
-    def carrier_name(key)
-      carriers[key]['name']
-    end
-
-    def carriers
-      @@carriers.dup
-    end
-
-    def deliver(number,carrier,message,options={})
-      raise SMSFuException.new("Can't deliver blank message to #{format_number(number)}") if message.nil? or message.empty?
-      options[:limit] ||= message.length
-      options[:from]  ||= @@from_address
-      message = message[0..options[:limit]-1]
-      sms_email = sms_email(format_number(number),carrier)
-
-      SmsNotifier.deliver_sms_message(sms_email,message,options[:from])
-    rescue SMSFuException => exception
-      raise exception
-    end
-
-    def sms_address(number,carrier)
-      number = format_number(number)
-      sms_email(number,carrier)
-    end
-
-    private
-
-    def format_number(number)
-      pre_formatted = number.gsub("-","").strip
-      formatted =  (pre_formatted.length == 11 && pre_formatted[0,1] == "1") ? pre_formatted[1..pre_formatted.length] : pre_formatted
-      return is_valid?(formatted) ? formatted : (raise SMSFuException.new("Phone number (#{number}) is not formatted correctly"))
-    end
-
-    def is_valid?(number)
-      number.length >= 10 && number[/^.\d+$/]
-    end  
-
-    def sms_email(phone_number, carrier)
-      raise SMSFuException.new("Specified carrier, #{carrier} is not supported.") unless @@carriers.has_key?(carrier.downcase)
-      "#{phone_number}#{@@carriers[carrier.downcase]['value']}"
-    end 
+  def self.configure(options = {})
+    new(options)
   end
-   
-  class SMSFuException < StandardError; end
+
+  def initialize(options = {})
+    raise_exception("Delivery options can only be: '#{DELIVERY_OPTIONS.join(", ")}'") unless DELIVERY_OPTIONS.include?(options[:delivery])
+    if options[:delivery] == :pony && (options[:pony_options][:via].to_sym != :sendmail && !options[:pony_options].has_key?(:via_options))
+      raise_exception("Missing Pony configuration options") 
+    end
+    
+    @@mail_config = { :delivery => options[:delivery].to_sym, :pony_options => options[:pony_options] }
+    @@yaml_config = YAML::load(options[:yaml_config] ? options[:yaml_config] : File.open("#{template_directory}/sms_fu.yml"))
+  end
+  
+  def from_address
+    @@yaml_config['config']['from_address']
+  end
+
+  def carriers
+    @@yaml_config['carriers'] 
+  end
+
+  def carrier_name(key)
+    carrier(key)['name']
+  end
+  
+  def carrier_email(key)
+    carrier(key.downcase)['value']
+  end
+  
+  def carrier(key)
+    raise_exception("Carrier (#{key}) is not supported") unless carriers.has_key?(key.downcase)
+    carriers[key]
+  end
+
+  def deliver(number, carrier, message, options = {})
+    raise_exception("Can't deliver blank message to #{format_number(number)}") if message.nil? or message.empty?
+    limit   = options[:limit] || message.length
+    from    = options[:from] || from_address
+    message = message[0..limit-1]
+    email   = sms_address(number,carrier)
+  
+    if @@mail_config[:delivery] == :pony
+      Pony.mail(:to => email, 
+        :body => message, 
+        :from => from, 
+        :via => @@mail_config[:pony_options][:via],
+        :via_options => @@mail_config[:pony_options][:via_options])
+    else
+      SMSNotifier.send_sms(email, message, from)
+    end
+  end
+
+  def sms_address(number,carrier)
+    format_number(number) + carrier_email(carrier.downcase)
+  end
+
+  protected
+
+  def format_number(number)
+    stripped = number.gsub("-","").strip
+    formatted = (stripped.length == 11 && stripped[0,1] == "1") ? stripped[1..stripped.length] : stripped
+    raise_exception("Number (#{number}) is not formatted correctly") unless valid_number?(formatted)
+    formatted
+  end
+
+  def valid_number?(number)
+    number.length >= 10 && number[/^.\d+$/]
+  end  
+
+  def template_directory
+    directory = defined?(Rails) ? "#{RAILS_ROOT}/config" : "#{File.dirname(__FILE__)}/../../templates"
+    if (defined?(Rails) && Rails.env == 'test') || (defined?(RAILS_ENV) && RAILS_ENV == 'test)')
+      "#{File.dirname(__FILE__)}/../../templates"
+    else
+      directory
+    end
+  end
+  
+  def raise_exception(message)
+    raise SMSFuException.new(message)
+  end
 end
+
+class SMSFuException < StandardError; end
