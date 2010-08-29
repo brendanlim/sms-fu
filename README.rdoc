@@ -23,14 +23,18 @@ limitation.
 Some carriers that need this include, Mobitel, Etisalat, T-Mobile (Netherlands), 
 etc.
 
+== Requirements
+
+* SMS Fu requires that 'action_mailer' (>= 3.0.0rc2) and 'pony' (>= 1.0) are installed.  
+
+* If you require SMS Fu on an older version of ActionMailer, make sure to use the older plugin version of SMS Fu at http://github.com/brendanlim/sms-fu/tree/plugin
+
 == Setup Instructions
 
 * Install sms_fu gem
   
   sudo gem install sms_fu
   
-* Make sure you have the 'action_mailer' (>= 3.0.0rc2) or 'pony' (>= 1.0) gem installed.  If you require SMS Fu on an older version of ActionMailer, make sure to use the older plugin version of this gem at: http://github.com/brendanlim/sms-fu/tree/plugin
-
 * Add sms_fu.yml to your config folder (Rails only)
 
   http://github.com/brendanlim/sms-fu/blob/master/templates/sms_fu.yml
