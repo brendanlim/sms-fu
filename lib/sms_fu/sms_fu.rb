@@ -1,8 +1,8 @@
 class SMSFu
   DELIVERY_OPTIONS = [:action_mailer, :pony]
   
-  def self.configure(options = {})
-    new(options)
+  def self.configure(delivery, options = {})
+    new(options.merge!(:delivery => delivery.to_sym))
   end
 
   def initialize(options = {})

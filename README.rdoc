@@ -74,15 +74,13 @@ etc.
   :pony_options as well, if necessary.  
   
     # ActionMailer delivery
-    sms_fu = SMSFu.configure(:delivery => :action_mailer)
+    sms_fu = SMSFu.configure(:action_mailer)
 
     # Pony delivery via Sendmail
-    sms_fu = SMSFu.configure(:delivery => :pony, :pony_options => { :via => :sendmail })
+    sms_fu = SMSFu.configure(:pony, :pony_options => { :via => :sendmail })
 
     # Pony delivery via SMTP
-    sms_fu = SMSFu.configure(:delivery => :pony, 
-      :pony_options => { 
-        :via => :smtp, 
+    sms_fu = SMSFu.configure(:pony, :pony_options => { :via => :smtp, 
         :via_options => {
           :address              => 'smtp.gmail.com',
           :port                 => '587',
