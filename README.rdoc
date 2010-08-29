@@ -91,7 +91,8 @@ limitation.  Some of these carriers are include, Mobitel, Etisalat, T-Mobile (Ne
       
 * You can view more pony 'via_options' at http://github.com/benprew/pony
       
-* Basic delivery
+      
+* Basic SMS delivery
 
     sms_fu.deliver("5558675309","at&t","message")
 
@@ -108,7 +109,7 @@ limitation.  Some of these carriers are include, Mobitel, Etisalat, T-Mobile (Ne
 
 * You can retrieve just the formatted address to use in your own mailer.
 
-    sms_fu.sms_address("5558675309","at&t") # => "5558675309@txt.att.net"
+    SMSFu.sms_address("5558675309","at&t") # => "5558675309@txt.att.net"
 
 == View Helpers (Rails)
 
