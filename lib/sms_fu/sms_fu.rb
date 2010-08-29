@@ -50,7 +50,7 @@ class SMSFu
         :via => @@mail_config[:pony_options][:via],
         :via_options => @@mail_config[:pony_options][:via_options])
     else
-      SMSNotifier.send_sms(email, message, from)
+      SMSNotifier.send_sms(email, message, from).deliver
     end
   end
 
