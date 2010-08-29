@@ -38,7 +38,7 @@ module SMSFu
       raise SMSFuException.new("Can't deliver blank message to #{format_number(number)}") if message.nil? || message.empty?
 
       limit   = options[:limit] || message.length
-      from    = options[:from] || from_address
+      from    = options[:from] || SMSFu.from_address
       message = message[0..limit-1]
       email   = SMSFu.sms_address(number,carrier)
 

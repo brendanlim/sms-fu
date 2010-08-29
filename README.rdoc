@@ -70,26 +70,29 @@ etc.
   :action_mailer.
 
 * If you would like to use Pony, you can configure it to use :sendmail or :smtp via 
-  Pony.  Set the :delivery option to :pony and then make sure to specify the 
-  :pony_options as well, if necessary.  
+  Pony.  Set the :delivery option to :pony and then make sure to include :pony_config
+  as well 
   
     # ActionMailer delivery
-    sms_fu = SMSFu.configure(:action_mailer)
+    sms_fu = SMSFu::Client.configure(:delivery => :action_mailer)
 
     # Pony delivery via Sendmail
-    sms_fu = SMSFu.configure(:pony, :pony_options => { :via => :sendmail })
+    sms_fu = SMSFu::Client.configure(:delivery => :pony, :pony_config => { :via => :sendmail })
 
     # Pony delivery via SMTP
-    sms_fu = SMSFu.configure(:pony, :pony_options => { :via => :smtp, 
-        :via_options => {
-          :address              => 'smtp.gmail.com',
-          :port                 => '587',
-          :user_name            => 'username',
-          :password             => 'password',
-          :authentication       => :plain, 
-          :domain               => "localhost.localdomain"
-          :enable_starttls_auto => true,
-      }})
+    PONY_CONFIG = { 
+      :via => :smtp, 
+      :via_options => {
+        :address              => 'smtp.gmail.com',
+        :port                 => '587',
+        :user_name            => 'username',
+        :password             => 'password',
+        :authentication       => :plain, 
+        :enable_starttls_auto => true,
+        :domain               => "localhost.localdomain"
+    }}
+    
+    sms_fu = SMSFu::Client.configure(:delivery => :pony, :pony_config => PONY_CONFIG)
       
 * You can view more pony 'via_options' at http://github.com/benprew/pony
       
