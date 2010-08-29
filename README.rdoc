@@ -59,8 +59,8 @@ etc.
 
 * Configure and setup SMS Fu
 
-SMS Fu relies on either ActionMailer or Pony for delivery.  You can now specify 
-which you'd like to use for delivery.
+*SMS Fu relies on either ActionMailer or Pony for delivery.  You can now specify 
+which you'd like to use for delivery.*
 
 You can use your ActionMailer settings by just specifying the :delivery option as 
 :action_mailer.
