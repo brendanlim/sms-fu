@@ -13,15 +13,10 @@ Powertel, PSC Wireless, Qwest, Rogers, Southern Link, Sprint, Suncom,
 T-Mobile (US/UK/Germany), Telefonica, Tracfone, Virgin Mobile, Verizon Wireless, 
 Vodafone (UK, Egypt, Italy, Japan, Spain), and many more ...
 
-== Opt-In Warning for Some International Carriers
-
 Some International carriers require that their users subscribe to an Email to SMS
 feature before they are able to receive SMS messages this way.  If one your users
 mentions that they are not receiving their messages, chances are it is due to this
-limitation.
-
-Some carriers that need this include, Mobitel, Etisalat, T-Mobile (Netherlands), 
-etc.
+limitation.  Some of these carriers are include, Mobitel, Etisalat, T-Mobile (Netherlands).
 
 == Requirements
 
