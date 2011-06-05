@@ -5,5 +5,3 @@ module SMSFu
     end
   end
 end
-
-puts "what the fuck"
