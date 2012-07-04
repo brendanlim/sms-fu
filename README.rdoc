@@ -113,6 +113,10 @@ limitation.  Some of these carriers are include, Mobitel, Etisalat, T-Mobile (Ne
 
 == View Helpers (Rails)
 
+* Include SMSFuHelper in controller or helper module
+
+    include SMSFuHelper
+
 * Retrieve a collection of all carriers
 
     <%= carrier_collection %>
