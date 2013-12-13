@@ -4,14 +4,14 @@ module SMSFu
     attr_accessor :delivery, :pony_config
 
     # Sets up a new SMSFu::Client.  Allows for use of ActionMailer or
-    # Pony for e-mail delivery.  Pony requires :pony_config to be 
+    # Pony for e-mail delivery.  Pony requires :pony_config to be
     # defined to work properly.
-    # 
+    #
     # * ActionMailer 3
     #   sms_fu = SMSFu::Client.configure(:delivery => :action_mailer)
     #
     # * Pony 1.0
-    #   sms_fu = SMSFu::Client.configure(:delivery => :pony, 
+    #   sms_fu = SMSFu::Client.configure(:delivery => :pony,
     #      :pony_config => { :via => :sendmail })
     #
     def self.configure(opts = {})
@@ -43,24 +43,26 @@ module SMSFu
       email   = SMSFu.sms_address(number,carrier)
 
       if @delivery == :pony
+        require 'pony'
         Pony.mail({:to => email, :body => message, :from => from}.merge!(@pony_config))
       else
+        require 'sms_fu/sms_notifier'
         SMSNotifier.send_sms(email, message, from).deliver
       end
     end
   end
-  
+
   class << self
     def config_yaml
       @@config_yaml ||= YAML::load(File.open("#{template_directory}/sms_fu.yml"))
     end
-  
+
     # Returns back a list of all carriers
     #   SMSFu.carriers
     def carriers
-      config_yaml['carriers'] 
+      config_yaml['carriers']
     end
-  
+
     def from_address
       config_yaml['config']['from_address']
     end
@@ -68,11 +70,11 @@ module SMSFu
     def carrier_name(key)
       carrier(key)['name']
     end
-  
+
     def carrier_email(key)
       carrier(key.downcase)['value']
     end
-    
+
     def carrier(key)
       raise SMSFuException.new("Carrier (#{key}) is not supported") unless SMSFu.carriers.has_key?(key.downcase)
       carriers[key]
@@ -96,7 +98,7 @@ module SMSFu
 
     def valid_number?(number)
       number.length >= 10 && number[/^.\d+$/]
-    end  
+    end
 
     def template_directory
       directory = defined?(Rails) ? "#{Rails.root}/config" : "#{File.dirname(__FILE__)}/../../templates"
