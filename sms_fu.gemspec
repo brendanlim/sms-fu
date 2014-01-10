@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{sms_fu}
-  s.version = "1.2.0"
+  s.version = "1.2.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Brendan G. Lim"]
@@ -19,6 +19,7 @@ Gem::Specification.new do |s|
      "Rakefile",
      "install.rb",
      "lib/sms_fu.rb",
+     "lib/sms_fu/rails.rb",
      "lib/sms_fu/sms_fu.rb",
      "lib/sms_fu/sms_fu_helper.rb",
      "lib/sms_fu/sms_notifier.rb",

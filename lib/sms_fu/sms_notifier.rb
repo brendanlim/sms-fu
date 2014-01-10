@@ -1,4 +1,4 @@
-require 'actionmailer'
+require 'action_mailer'
 
 class SMSNotifier < ActionMailer::Base
   def send_sms(recipient, message, sender_email)

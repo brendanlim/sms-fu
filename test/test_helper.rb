@@ -1,7 +1,7 @@
 require 'test/unit'
 require 'rubygems'
 
-require 'actionmailer'
+require 'action_mailer'
 
 RAILS_ROOT = '.' unless defined?(RAILS_ROOT)
 RAILS_ENV = 'test' unless defined?(RAILS_ENV)
