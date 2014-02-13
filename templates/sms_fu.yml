@@ -68,6 +68,9 @@ carriers:
   telus-mobility: 
     name: Telus Mobility
     value: @msg.telus.com
+  uscellular:
+    name: US Cellular
+    value: @email.uscc.net
   virgin: 
     name: Virgin Mobile
     value: @vmobl.net
