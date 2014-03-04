@@ -108,6 +108,9 @@ carriers:
   fido-canada: 
     name: Fido
     value: @fido.ca
+  koodoo:
+    name: Koodoo (Canada)
+    value: @msg.koodomobile.com
   manitobatelecom-canada:
     name: Manitoba Telecom (Canada)
     value: @text.mtsmobility.com
