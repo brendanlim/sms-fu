@@ -4,236 +4,236 @@ config:
 carriers:
   alltel:
     name: Alltel
-    value: @message.alltel.com
+    value: "@message.alltel.com"
   ameritech:
     name: Ameritech
-    value: @paging.acswireless.com
+    value: "@paging.acswireless.com"
   at&t: 
     name: AT&T
-    value: @txt.att.net
+    value: "@txt.att.net"
   bell-atlantic: 
     name: Bell Atlantic
-    value: @message.bam.com
+    value: "@message.bam.com"
   bellsouthmobility:
     name: Bellsouth Mobility
-    value: @blsdcs.net
+    value: "@blsdcs.net"
   blueskyfrog: 
     name: BlueSkyFrog
-    value: @blueskyfrog.com
+    value: "@blueskyfrog.com"
   boost: 
     name: Boost Mobile
-    value: @myboostmobile.com
+    value: "@myboostmobile.com"
   cellularsouth: 
     name: Cellular South
-    value: @csouth1.com
+    value: "@csouth1.com"
   comcast: 
     name: Comcast PCS
-    value: @comcastpcs.textmsg.com
+    value: "@comcastpcs.textmsg.com"
   cricket: 
     name: Cricket
-    value: @sms.mycricket.com
+    value: "@sms.mycricket.com"
   kajeet: 
     name: kajeet
-    value: @mobile.kajeet.net
+    value: "@mobile.kajeet.net"
   metropcs: 
     name: Metro PCS
-    value: @mymetropcs.com
+    value: "@mymetropcs.com"
   nextel:
     name: Nextel
-    value: @messaging.nextel.com
+    value: "@messaging.nextel.com"
   powertel: 
     name: Powertel
-    value: @ptel.net
+    value: "@ptel.net"
   pscwireless: 
     name: PSC Wireless
-    value: @sms.pscel.com
+    value: "@sms.pscel.com"
   qwest: 
     name: Qwest
-    value: @qwestmp.com
+    value: "@qwestmp.com"
   southernlink: 
     name: Southern Link
-    value: @page.southernlinc.com
+    value: "@page.southernlinc.com"
   sprint: 
     name: Sprint PCS
-    value: @messaging.sprintpcs.com
+    value: "@messaging.sprintpcs.com"
   suncom: 
     name: Suncom
-    value: @tms.suncom.com
+    value: "@tms.suncom.com"
   t-mobile: 
     name: T-Mobile
-    value: @tmomail.net
+    value: "@tmomail.net"
   tracfone: 
     name: Tracfone
-    value: @mmst5.tracfone.com
+    value: "@mmst5.tracfone.com"
   telus-mobility: 
     name: Telus Mobility
-    value: @msg.telus.com
+    value: "@msg.telus.com"
   uscellular:
     name: US Cellular
-    value: @email.uscc.net
+    value: "@email.uscc.net"
   virgin: 
     name: Virgin Mobile
-    value: @vmobl.net
+    value: "@vmobl.net"
   verizon: 
     name: Verizon Wireless
-    value: @vtext.com
+    value: "@vtext.com"
   # International Carriers
   aliant-canada:
     name: Aliant (Canada)
-    value: @chat.wirefree.ca
+    value: "@chat.wirefree.ca"
   beeline-ua: 
     name: Beeline
-    value: @sms.beeline.ua
+    value: "@sms.beeline.ua"
   bellmobility-canada:
     name: Bell Mobility (Canada)
-    value: @txt.bell.ca
+    value: "@txt.bell.ca"
   bpl-mobile: 
     name: BPL Mobile
-    value: @bplmobile.com
+    value: "@bplmobile.com"
   claro-brazil:
     name: Claro (Brazil)
-    value: @clarotorpedo.com.br
+    value: "@clarotorpedo.com.br"
   claro-nicaragua: 
     name: Claro (Nicaragua)
-    value: @ideasclaro-ca.com
+    value: "@ideasclaro-ca.com"
   du-arab-emirates: 
     name: Du (UAE)
-    value: @email2sms.ae
+    value: "@email2sms.ae"
   e-plus-germany: 
     name: E-Plus (Germany)
-    value: @smsmail.eplus.de
+    value: "@smsmail.eplus.de"
   etisalat-arab-emirates: 
     name: Etisalat (UAE)
-    value: @email2sms.ae
+    value: "@email2sms.ae"
   fido-canada: 
     name: Fido
-    value: @fido.ca
+    value: "@fido.ca"
   koodoo:
     name: Koodoo (Canada)
-    value: @msg.koodomobile.com
+    value: "@msg.koodomobile.com"
   manitobatelecom-canada:
     name: Manitoba Telecom (Canada)
-    value: @text.mtsmobility.com
+    value: "@text.mtsmobility.com"
   mobinil-egypt:
     name: Mobinil
-    value: @mobinil.net
+    value: "@mobinil.net"
   mobistar-belgium: 
     name: Mobistar (Belgium)
-    value: @mobistar.be
+    value: "@mobistar.be"
   mobitel: 
     name: Mobitel
-    value: @sms.mobitel.lk
+    value: "@sms.mobitel.lk"
   movistar-spain: 
     name: Movistar (Spain)
-    value: @correo.movistar.net
+    value: "@correo.movistar.net"
   northerntel-canada:
     name: NorthernTel (Canada)
-    value: @txt.northerntelmobility.com
+    value: "@txt.northerntelmobility.com"
   o2-germany: 
     name: o2 (Germany)
-    value: @o2online.de
+    value: "@o2online.de"
   o2-uk: 
     name: o2 (UK)
-    value: @mmail.co.uk
+    value: "@mmail.co.uk"
   orange-mumbai: 
     name: Orange (Mumbai)
-    value: @orangemail.co.in
+    value: "@orangemail.co.in"
   orange-netherlands: 
     name: Orange (Netherlands)
-    value: @sms.orange.nl
+    value: "@sms.orange.nl"
   orange-uk: 
     name: Orange (UK)
-    value: @orange.net
+    value: "@orange.net"
   rogers-wireless: 
     name: Rogers Wireless
-    value: @pcs.rogers.com
+    value: "@pcs.rogers.com"
   rogers-canada:
     name: Rogers (Canada)
-    value: @pcs.rogers.ca
+    value: "@pcs.rogers.ca"
   sasktel-canada:
     name: SaskTel (canada)
-    value: @sms.sasktel.ca
+    value: "@sms.sasktel.ca"
   sfr-france: 
     name: SFR (France)
-    value: @sfr.fr
+    value: "@sfr.fr"
   t-mobile-austria: 
     name: T-Mobile (Austria)
-    value: @sms.t-mobile.at
+    value: "@sms.t-mobile.at"
   t-mobile-germany: 
     name: T-Mobile (Germany)
-    value: @t-d1-sms.de
+    value: "@t-d1-sms.de"
   t-mobile-germany: 
     name: T-Mobile (Netherlands)
-    value: @gin.nl
+    value: "@gin.nl"
   t-mobile-uk: 
     name: T-Mobile (UK)
-    value: @t-mobile.uk.net
+    value: "@t-mobile.uk.net"
   telebec-canada:
     name: Telebec (Canada)
-    value: @txt.telebecmobilite.com
+    value: "@txt.telebecmobilite.com"
   telefonica-spain: 
     name: Telefonica (Spain)
-    value: @movistar.net
+    value: "@movistar.net"
   telus-canada:
     name: Telus (Canada)
-    value: @msg.telus.com
+    value: "@msg.telus.com"
   virgin-canada:
     name: Virgin (Canada)
-    value: @vmobile.ca 
+    value: "@vmobile.ca "
   vodafone-germany: 
     name: Vodafone (Germany)
-    value: @vodafone-sms.de
+    value: "@vodafone-sms.de"
   vodafone-egypt: 
     name: Vodafone (Egypt)
-    value: @vodafone.com.eg
+    value: "@vodafone.com.eg"
   vodafone-uk: 
     name: Vodafone (UK)
-    value: @sms.vodafone.net
+    value: "@sms.vodafone.net"
   vodafone-italy: 
     name: Vodafone (Italy)
-    value: @sms.vodafone.it
+    value: "@sms.vodafone.it"
   vodafone-jp-chuugoku: 
     name: Vodafone (Japan - Chuugoku)
-    value: @n.vodafone.ne.jp
+    value: "@n.vodafone.ne.jp"
   vodafone-jp-hokkaido: 
     name: Vodafone (Japan - Hokkaido)
-    value: @d.vodafone.ne.jp
+    value: "@d.vodafone.ne.jp"
   vodafone-jp-hokuriko: 
     name: Vodafone (Japan - Hokuriko)
-    value: @r.vodafone.ne.jp
+    value: "@r.vodafone.ne.jp"
   vodafone-jp-kansai: 
     name: Vodafone (Japan - Kansai)
-    value: @k.vodafone.ne.jp
+    value: "@k.vodafone.ne.jp"
   vodafone-jp-osaka: 
     name: Vodafone (Japan - Osaka)
-    value: @k.vodafone.ne.jp
+    value: "@k.vodafone.ne.jp"
   vodafone-jp-kanto: 
     name: Vodafone (Japan - Kanto)
-    value: @k.vodafone.ne.jp
+    value: "@k.vodafone.ne.jp"
   vodafone-jp-koushin: 
     name: Vodafone (Japan - Koushin)
-    value: @k.vodafone.ne.jp
+    value: "@k.vodafone.ne.jp"
   vodafone-jp-tokyo: 
     name: Vodafone (Japan - Tokyo)
-    value: @k.vodafone.ne.jp
+    value: "@k.vodafone.ne.jp"
   vodafone-jp-kyuushu: 
     name: Vodafone (Japan - Kyuushu)
-    value: @q.vodafone.ne.jp
+    value: "@q.vodafone.ne.jp"
   vodafone-jp-okinawa: 
     name: Vodafone (Japan - Okinawa)
-    value: @q.vodafone.ne.jp
+    value: "@q.vodafone.ne.jp"
   vodafone-jp-shikoku: 
     name: Vodafone (Japan - Shikoku)
-    value: @s.vodafone.ne.jp
+    value: "@s.vodafone.ne.jp"
   vodafone-jp-touhoku: 
     name: Vodafone (Japan - Touhoku)
-    value: @h.vodafone.ne.jp
+    value: "@h.vodafone.ne.jp"
   vodafone-jp-niigata: 
     name: Vodafone (Japan - Niigata)
-    value: @h.vodafone.ne.jp
+    value: "@h.vodafone.ne.jp"
   vodafone-jp-toukai: 
     name: Vodafone (Japan - Toukai)
-    value: @h.vodafone.ne.jp
+    value: "@h.vodafone.ne.jp"
   vodafone-spain: 
     name: Vodafone (Japan - Spain)
-    value: @vodafone.es
+    value: "@vodafone.es"
